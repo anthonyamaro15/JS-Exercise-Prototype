@@ -47,9 +47,9 @@ function Person(name, age) {
   };
 }
 
-Person.prototype.eat = function() {
+Person.prototype.eat = function(food) {
   if (this.stomach.length < 10) {
-    this.stomach.push("food");
+    return this.stomach.push(food);
   }
 };
 
@@ -117,10 +117,10 @@ Baby.prototype.play = function() {
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. the default biding if you just console.log(this) in the global scope it will refer to the window object.
+  2. a good example of implicit binding will be inside an object. it will refer to whatever is on the left of the dot.
+  3. an example of explicit i can think of would be react where you have to bind the method at the constructor with the this keyword or use arrow functions.
+  4. for the new binding calling the new keyword before calling the function we set the object as the this keyword.
 */
 
 ///////// END OF CHALLENGE /////////
